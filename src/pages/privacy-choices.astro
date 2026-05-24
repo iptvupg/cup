@@ -1,0 +1,36 @@
+---
+import LegalPage from '../components/LegalPage.astro';
+
+const sections = [
+  {
+    title: 'Manage browser cookies',
+    body: 'You can limit or block cookies through your browser settings. Blocking cookies may affect analytics, saved preferences, checkout flows, or account features.',
+  },
+  {
+    title: 'Advertising and analytics choices',
+    body: 'If advertising or analytics tools are used, those providers may offer opt-out settings. Review the settings in your browser and any available account or consent controls.',
+  },
+  {
+    title: 'Account and contact requests',
+    body: 'If an account area or support contact is available, use it to request access, correction, or deletion of personal information where applicable law provides those rights.',
+  },
+  {
+    title: 'Regional privacy rights',
+    body: 'Privacy rights vary by region. Depending on where you live, you may have rights to know, access, correct, delete, or opt out of certain data uses.',
+  },
+  {
+    title: 'Important note',
+    body: 'This page provides general privacy-choice information for the website and should be reviewed by a qualified privacy professional before production use.',
+  },
+];
+---
+
+<LegalPage
+  title="Your Privacy Choices | IPTV World Cup"
+  description="Manage privacy choices for IPTV World Cup, including cookies, analytics, advertising preferences, and regional privacy rights."
+  canonicalPath="/privacy-choices"
+  eyebrow="Privacy"
+  heading="Your Privacy Choices"
+  intro="Use this page to understand common privacy controls for cookies, analytics, advertising, and account-related data."
+  sections={sections}
+/>

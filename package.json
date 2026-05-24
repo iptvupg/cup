@@ -1,0 +1,19 @@
+{
+  "name": "fox-one-fifa-2026",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "astro": "^5.0.0",
+    "@astrojs/tailwind": "^5.1.4",
+    "tailwindcss": "^3.4.17",
+    "lucide-astro": "^0.469.0",
+    "@fontsource/inter": "^5.1.1"
+  }
+}

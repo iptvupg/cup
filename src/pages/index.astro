@@ -1,0 +1,31 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import TopNav from '../components/TopNav.astro';
+import HeroSection from '../components/HeroSection.astro';
+import JourneyRail from '../components/JourneyRail.astro';
+import PromoBanner from '../components/PromoBanner.astro';
+import Devices from '../components/Devices.astro';
+import IPTVGuide from '../components/IPTVGuide.astro';
+import Pricing from '../components/Pricing.astro';
+import FAQ from '../components/FAQ.astro';
+import FinalCTA from '../components/FinalCTA.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout
+  title="IPTV Service for FIFA World Cup 2026 | Subscription from $16"
+  description="Compare IPTV service plans for FIFA World Cup 2026 and live football. Choose an IPTV subscription from $16 with smart TV, mobile, console, and browser support."
+>
+  <TopNav />
+  <main id="main">
+    <HeroSection />
+    <JourneyRail />
+    <PromoBanner />
+    <Devices />
+    <IPTVGuide />
+    <Pricing />
+    <FAQ />
+    <FinalCTA />
+  </main>
+  <Footer />
+</BaseLayout>

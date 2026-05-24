@@ -1,0 +1,123 @@
+---
+import { SITE, FAQS } from '../data/site';
+
+const organization = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: SITE.name,
+  url: SITE.domain,
+  logo: `${SITE.domain}/favicon.svg`,
+};
+
+const website = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  url: SITE.domain,
+  name: SITE.name,
+  inLanguage: 'en-US',
+};
+
+const offerCatalog = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: `${SITE.name} IPTV service`,
+  serviceType: 'Live TV streaming subscription',
+  description:
+    'IPTV service plans for FIFA World Cup 2026, live football, and multi-device streaming.',
+  url: `${SITE.domain}#pricing`,
+  provider: {
+    '@type': 'Organization',
+    name: SITE.name,
+    url: SITE.domain,
+  },
+  areaServed: {
+    '@type': 'Country',
+    name: 'United States',
+  },
+  offers: {
+    '@type': 'AggregateOffer',
+    priceCurrency: 'USD',
+    lowPrice: '16',
+    highPrice: '90',
+    offerCount: '4',
+    url: `${SITE.domain}#pricing`,
+    availability: 'https://schema.org/InStock',
+  },
+};
+
+const sportsEvent = {
+  '@context': 'https://schema.org',
+  '@type': 'SportsEvent',
+  name: 'FIFA World Cup 2026',
+  description:
+    'The 2026 FIFA World Cup features 48 nations and 104 matches co-hosted by the United States, Canada, and Mexico.',
+  startDate: SITE.startDate,
+  endDate: SITE.endDate,
+  eventStatus: 'https://schema.org/EventScheduled',
+  eventAttendanceMode: 'https://schema.org/MixedEventAttendanceMode',
+  sport: 'Soccer',
+  location: [
+    {
+      '@type': 'Place',
+      name: 'MetLife Stadium (Final)',
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: '1 MetLife Stadium Dr',
+        addressLocality: 'East Rutherford',
+        addressRegion: 'NJ',
+        postalCode: '07073',
+        addressCountry: 'US',
+      },
+    },
+    { '@type': 'Country', name: 'United States' },
+    { '@type': 'Country', name: 'Canada' },
+    { '@type': 'Country', name: 'Mexico' },
+  ],
+  organizer: {
+    '@type': 'SportsOrganization',
+    name: 'FIFA',
+    url: 'https://www.fifa.com',
+  },
+};
+
+const faqPage = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  dateModified: SITE.lastUpdated,
+  mainEntity: FAQS.map((f) => ({
+    '@type': 'Question',
+    name: f.q,
+    acceptedAnswer: { '@type': 'Answer', text: f.a },
+  })),
+};
+
+const breadcrumb = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: SITE.domain },
+  ],
+};
+
+const webPage = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  url: SITE.domain,
+  name: 'IPTV service plans for FIFA World Cup 2026',
+  description: SITE.description,
+  dateModified: SITE.lastUpdated,
+  inLanguage: 'en-US',
+  speakable: {
+    '@type': 'SpeakableSpecification',
+    cssSelector: ['h1', '.speakable-answer'],
+  },
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(organization)} />
+<script type="application/ld+json" set:html={JSON.stringify(website)} />
+<script type="application/ld+json" set:html={JSON.stringify(offerCatalog)} />
+<script type="application/ld+json" set:html={JSON.stringify(sportsEvent)} />
+<script type="application/ld+json" set:html={JSON.stringify(faqPage)} />
+<script type="application/ld+json" set:html={JSON.stringify(breadcrumb)} />
+<script type="application/ld+json" set:html={JSON.stringify(webPage)} />

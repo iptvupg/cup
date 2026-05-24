@@ -1,0 +1,95 @@
+---
+import '@fontsource/inter/400.css';
+import '@fontsource/inter/600.css';
+import '@fontsource/inter/700.css';
+import '@fontsource/inter/900.css';
+import '../styles/global.css';
+import SchemaJsonLd from '../components/SchemaJsonLd.astro';
+import { SITE } from '../data/site';
+
+interface Props {
+  title?: string;
+  description?: string;
+  canonical?: string;
+  includeSchema?: boolean;
+}
+
+const {
+  title = 'IPTV Service for FIFA World Cup 2026 | Subscription from $16',
+  description = SITE.description,
+  canonical = SITE.domain,
+  includeSchema = true,
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
+
+    <!-- Primary SEO -->
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="googlebot" content="index, follow" />
+    <meta name="keywords" content="iptv service, iptv subscription, best iptv service, FIFA World Cup IPTV subscription, stream live football" />
+    <meta name="author" content="IPTV World Cup" />
+    <meta name="date" content={SITE.lastUpdated} />
+
+    <!-- AI / LLM crawler hints -->
+    <meta name="GPTBot" content="index, follow" />
+    <meta name="ClaudeBot" content="index, follow" />
+    <meta name="PerplexityBot" content="index, follow" />
+    <meta name="Google-Extended" content="index, follow" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={SITE.name} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={SITE.ogImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="FIFA World Cup 2026 live streaming on IPTV World Cup" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@FOXSports" />
+    <meta name="twitter:creator" content="@FOXSports" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={SITE.ogImage} />
+    <meta name="twitter:image:alt" content="FIFA World Cup 2026 live streaming on IPTV World Cup" />
+
+    <!-- Geo + theming -->
+    <meta name="theme-color" content="#0a0a0a" />
+    <meta name="geo.region" content="US" />
+    <meta name="geo.placename" content="United States" />
+
+    <!-- Resource hints -->
+    <link rel="preconnect" href="https://images.api.fox.com" crossorigin />
+    <link rel="dns-prefetch" href="https://images.api.fox.com" />
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+    <link rel="alternate" type="text/markdown" href="/llms.txt" title="LLM summary" />
+    <link rel="alternate" type="text/markdown" href="/llms-full.txt" title="Full LLM knowledge base" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Structured data -->
+    {includeSchema && <SchemaJsonLd />}
+  </head>
+  <body class="bg-canvas text-white antialiased">
+    <a
+      href="#main"
+      class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:rounded-md focus:bg-ch-yellow focus:px-4 focus:py-2 focus:text-on-yellow"
+      >Skip to main content</a
+    >
+    <slot />
+  </body>
+</html>

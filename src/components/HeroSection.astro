@@ -1,0 +1,121 @@
+---
+import CTAButton from './CTAButton.astro';
+
+// Official FOX assets (responsive)
+const heroMobile =
+  'https://images.api.fox.com/dtc/pmt/assets/Sports_1045x1784__11__1773363698261.jpg?width=900&height=*&fit=bounds&format=avif';
+const heroTablet =
+  'https://images.api.fox.com/dtc/pmt/assets/Sports_1784x1792__10__1773363680553.jpg?width=900&height=*&fit=bounds&format=avif';
+const heroDesktop =
+  'https://images.api.fox.com/dtc/pmt/assets/Hero_2880x1280__17__1773363662531.jpg?width=1600&height=*&fit=bounds&format=avif';
+const alt = 'Watch FIFA World Cup 2026 Live – Stream All 104 Matches, June 11 to July 19';
+---
+
+<section
+  class="relative isolate w-full overflow-hidden bg-canvas"
+  aria-label="FIFA World Cup 2026 hero"
+>
+  <!-- Responsive background images -->
+  <picture>
+    <!-- Mobile portrait -->
+    <source media="(max-width: 639px)" srcset={heroMobile} />
+    <!-- Tablet -->
+    <source media="(max-width: 1023px)" srcset={heroTablet} />
+    <!-- Desktop -->
+    <source media="(min-width: 1024px)" srcset={heroDesktop} />
+    <img
+      src={heroDesktop}
+      alt={alt}
+      width="1600"
+      height="900"
+      decoding="async"
+      fetchpriority="high"
+      class="absolute inset-0 -z-10 h-full w-full object-cover object-top lg:object-center"
+    />
+  </picture>
+
+  <div class="pointer-events-none absolute inset-0 z-0 bg-canvas/25 md:bg-canvas/10"></div>
+
+  <!-- Left-to-right gradient (desktop): readable text over image -->
+  <div
+    class="pointer-events-none absolute left-0 top-0 z-10 hidden h-full w-2/3 bg-gradient-to-r from-canvas from-5% via-canvas/90 to-transparent md:block xl:w-1/2"
+  >
+  </div>
+
+  <!-- Right vignette (xl) -->
+  <div
+    class="pointer-events-none absolute right-0 top-0 z-10 hidden h-full w-[25px] bg-gradient-to-l from-canvas to-transparent xl:block"
+  >
+  </div>
+
+  <!-- Bottom fade for legibility (mobile: full overlay to clear all text, desktop: subtle) -->
+  <div
+    class="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-[78%] bg-gradient-to-t from-canvas from-54% via-canvas/90 to-transparent md:hidden"
+  >
+  </div>
+  <div
+    class="pointer-events-none absolute inset-x-0 bottom-0 z-10 hidden h-1/4 bg-gradient-to-t from-canvas via-canvas/50 to-transparent md:block"
+  >
+  </div>
+
+  <!-- Content -->
+  <div
+    class="relative z-20 mx-auto flex min-h-[640px] w-full max-w-coreMaxWidth flex-col justify-center px-6 py-10 text-center md:min-h-[680px] md:pl-12 md:pr-12 md:text-left lg:min-h-[720px] lg:pl-20"
+  >
+    <div class="flex max-w-[590px] flex-col items-center md:items-start">
+      <!-- Eyebrow / trust line -->
+      <p
+        class="mb-4 text-[12px] font-semibold uppercase tracking-[0.125em] text-ch-yellow [text-shadow:0_2px_12px_rgba(0,0,0,0.85)] animate-fade-up [animation-delay:50ms] md:[text-shadow:none]"
+      >
+        FIFA World Cup IPTV Subscription · Stream Live Football
+      </p>
+
+      <!-- Headline (H1 — primary keyword first) -->
+      <h1
+        class="mb-2 inline max-w-[12ch] pb-2 text-[34px]/[0.98] font-bold tracking-[-0.015em] text-white [text-shadow:0_2px_16px_rgba(0,0,0,0.9)] animate-fade-up [animation-delay:120ms] sm:text-[44px]/[0.97] lg:text-[58px]/[0.95] xl:text-[64px]/[0.94] md:[text-shadow:none]"
+      >
+        Stream FIFA World Cup 2026 Live with IPTV
+      </h1>
+
+      <!-- Subheadline -->
+      <p
+        class="mt-4 max-w-[560px] text-balance text-[15px] leading-[1.55] text-body-strong animate-fade-up [animation-delay:180ms] md:text-lg"
+      >
+        Get a football-first IPTV subscription for the 2026 tournament. Start your <strong class="text-white">24-hour free trial</strong>, compare the experience on your devices, and keep watching from $16.
+      </p>
+
+      <!-- CTA + Trust signals -->
+      <div
+        class="mx-auto mt-6 flex w-full flex-col items-center gap-3 pb-3 animate-fade-up [animation-delay:240ms] md:ml-0 md:mt-8 md:w-auto md:items-start md:pb-0"
+      >
+        <CTAButton href="#start" ariaLabel="Start your 24-hour free trial">
+          Start 24 Hours Free
+        </CTAButton>
+        <p class="text-center text-[13px] font-medium text-body md:text-left">
+          Plans from $16 · Smart TV, mobile, console, and browser
+        </p>
+      </div>
+
+      <!-- Credibility stat strip -->
+      <dl
+        class="mt-7 grid w-full max-w-[560px] grid-cols-3 gap-4 border-t border-hairline/80 pt-5 animate-fade-up [animation-delay:300ms] md:mt-8 md:max-w-[480px]"
+      >
+        <div class="flex flex-col">
+          <dt class="text-[11px] font-semibold uppercase tracking-[0.125em] text-muted">Matches</dt>
+          <dd class="mt-1 text-[28px] font-bold leading-none tracking-[-0.0375em] text-ch-yellow md:text-[32px]">104</dd>
+        </div>
+        <div class="flex flex-col">
+          <dt class="text-[11px] font-semibold uppercase tracking-[0.125em] text-muted">Teams</dt>
+          <dd class="mt-1 text-[28px] font-bold leading-none tracking-[-0.0375em] text-ch-yellow md:text-[32px]">48</dd>
+        </div>
+        <div class="flex flex-col">
+          <dt class="text-[11px] font-semibold uppercase tracking-[0.125em] text-muted">Host Cities</dt>
+          <dd class="mt-1 text-[28px] font-bold leading-none tracking-[-0.0375em] text-ch-yellow md:text-[32px]">16</dd>
+        </div>
+      </dl>
+    </div>
+  </div>
+
+  <!-- Smooth fade-out to next section for journey continuity -->
+  <div class="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-24 bg-gradient-to-b from-transparent to-canvas"></div>
+</section>

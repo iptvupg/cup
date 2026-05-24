@@ -1,0 +1,36 @@
+---
+const steps = [
+  { label: 'Follow the tournament', href: '#teams' },
+  { label: 'Check your devices', href: '#devices' },
+  { label: 'Choose an IPTV service', href: '#iptv-service' },
+  { label: 'Compare plans', href: '#pricing' },
+  { label: 'Start the trial', href: '#start' },
+];
+---
+
+<section
+  aria-label="Streaming journey"
+  class="border-y border-hairline bg-canvas px-6 py-5 md:px-12"
+>
+  <div class="mx-auto w-full max-w-coreMaxWidth">
+    <ol class="grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
+      {
+        steps.map((step, index) => (
+          <li>
+            <a
+              href={step.href}
+              class="group flex min-h-14 items-center gap-3 rounded-md border border-hairline bg-surface-soft px-4 py-3 transition-colors hover:border-ch-yellow/40 hover:bg-surface-card focus:outline-none focus-visible:ring-2 focus-visible:ring-ch-yellow focus-visible:ring-offset-2 focus-visible:ring-offset-canvas"
+            >
+              <span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-sm bg-ch-yellow text-[12px] font-bold text-on-yellow">
+                {index + 1}
+              </span>
+              <span class="text-sm font-semibold text-body-strong transition-colors group-hover:text-white">
+                {step.label}
+              </span>
+            </a>
+          </li>
+        ))
+      }
+    </ol>
+  </div>
+</section>

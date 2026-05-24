@@ -1,0 +1,21 @@
+---
+interface Props {
+  href?: string;
+  ariaLabel?: string;
+  fullWidthMobile?: boolean;
+}
+const { href = '#', ariaLabel, fullWidthMobile = true } = Astro.props;
+---
+
+<a
+  href={href}
+  aria-label={ariaLabel}
+  class:list={[
+    'inline-flex h-12 items-center justify-center rounded-md bg-ch-yellow px-6 text-[14px] font-semibold text-on-yellow',
+    'transition-colors duration-150 ease-out hover:bg-primary-active',
+    'focus:outline-none focus-visible:ring-2 focus-visible:ring-ch-yellow focus-visible:ring-offset-2 focus-visible:ring-offset-canvas',
+    fullWidthMobile ? 'w-full sm:w-auto sm:min-w-[220px]' : '',
+  ]}
+>
+  <slot />
+</a>

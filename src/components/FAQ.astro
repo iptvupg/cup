@@ -1,0 +1,51 @@
+---
+import SectionWrapper from './SectionWrapper.astro';
+import { Plus } from 'lucide-astro';
+import { FAQS } from '../data/site';
+---
+
+<SectionWrapper
+  id="faq"
+  ariaLabel="Frequently asked questions about FIFA World Cup 2026 streaming"
+  className="bg-canvas"
+>
+  <div class="mb-14 text-center">
+    <p class="mb-3 text-[12px] font-semibold uppercase tracking-[0.125em] text-ch-yellow">
+      Step 4 · Get Answers
+    </p>
+    <h2 class="mx-auto max-w-3xl text-balance text-3xl font-bold leading-[1.1] tracking-[-0.0357em] text-white md:text-5xl">
+      Questions buyers ask before choosing IPTV World Cup
+    </h2>
+    <p class="mx-auto mt-5 max-w-2xl text-base leading-[1.55] text-body md:text-lg">
+      Clear answers about FIFA World Cup IPTV subscriptions, FIFA+ search intent, pricing, devices, and the 24-hour trial.
+    </p>
+  </div>
+
+  <div class="mx-auto max-w-3xl divide-y divide-hairline rounded-lg border border-hairline bg-surface-card">
+    {
+      FAQS.map((f, i) => (
+        <details
+          class="group px-6 py-5 [&[open]_.faq-icon]:rotate-45"
+          open={i === 0}
+          name="faq-accordion"
+        >
+          <summary class="flex cursor-pointer list-none items-start justify-between gap-6">
+            <h3 class="text-base font-semibold leading-snug text-white md:text-lg">{f.q}</h3>
+            <Plus
+              size={20}
+              class="faq-icon mt-1 shrink-0 text-ch-yellow transition-transform duration-300"
+            />
+          </summary>
+          <p class="speakable-answer mt-4 text-sm leading-[1.55] text-body md:text-base">
+            {f.a}
+          </p>
+        </details>
+      ))
+    }
+  </div>
+</SectionWrapper>
+
+<style>
+  summary::-webkit-details-marker { display: none; }
+  summary::marker { display: none; }
+</style>

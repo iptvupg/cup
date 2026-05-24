@@ -1,0 +1,135 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import TopNav from '../components/TopNav.astro';
+import Footer from '../components/Footer.astro';
+import CTAButton from '../components/CTAButton.astro';
+import { SITE } from '../data/site';
+
+const benefits = [
+  {
+    title: 'Test the stream before you commit',
+    body: 'Use the 24-hour IPTV free trial to check picture quality, device setup, and live football viewing before choosing a paid plan.',
+  },
+  {
+    title: 'Works on the devices people actually use',
+    body: 'Try IPTV World Cup on smart TVs, streaming devices, phones, tablets, game consoles, and modern web browsers.',
+  },
+  {
+    title: 'Choose a plan after the trial',
+    body: 'Continue from $16 for 1 month, or compare 3-month, 6-month, and 12-month IPTV subscription options.',
+  },
+];
+
+const steps = [
+  'Start the 24-hour free trial.',
+  'Open IPTV World Cup on your preferred device.',
+  'Check live football quality, setup, and compatibility.',
+  'Choose the subscription length that fits your tournament schedule.',
+];
+---
+
+<BaseLayout
+  title="IPTV Free Trial | Test IPTV World Cup for 24 Hours"
+  description="Start an IPTV free trial for IPTV World Cup. Test live football streaming for 24 hours, check device compatibility, and compare IPTV subscription plans from $16."
+  canonical={`${SITE.domain}/iptv-free-trial`}
+  includeSchema={false}
+>
+  <TopNav />
+  <main id="main" class="bg-canvas">
+    <section class="px-6 py-16 md:px-12 md:py-24">
+      <div class="mx-auto grid max-w-coreMaxWidth gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
+        <div>
+          <p class="mb-4 text-[12px] font-semibold uppercase tracking-[0.125em] text-ch-yellow">
+            IPTV Free Trial
+          </p>
+          <h1 class="max-w-3xl text-balance text-4xl font-bold leading-[1.05] tracking-[-0.02em] text-white md:text-6xl">
+            Test IPTV World Cup for 24 hours before you choose a plan.
+          </h1>
+          <p class="mt-6 max-w-2xl text-base leading-[1.65] text-body md:text-lg">
+            Start an IPTV free trial, check live football streaming on your device, and continue only if the setup feels right for your FIFA World Cup 2026 viewing plans.
+          </p>
+          <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+            <CTAButton href="/#pricing" ariaLabel="Compare IPTV subscription plans">
+              Compare Plans
+            </CTAButton>
+            <a
+              href="/#devices"
+              class="inline-flex h-12 items-center justify-center rounded-md border border-hairline px-6 text-[14px] font-semibold text-body-strong transition-colors hover:border-ch-yellow/40 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-ch-yellow focus-visible:ring-offset-2 focus-visible:ring-offset-canvas"
+            >
+              Check Devices
+            </a>
+          </div>
+        </div>
+
+        <aside class="rounded-lg border border-hairline bg-surface-card p-6 md:p-8">
+          <p class="text-[12px] font-semibold uppercase tracking-[0.125em] text-ch-yellow">
+            Trial checklist
+          </p>
+          <ol class="mt-6 space-y-4">
+            {
+              steps.map((step, index) => (
+                <li class="flex gap-3 text-sm leading-[1.6] text-body md:text-base">
+                  <span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-sm bg-ch-yellow text-[12px] font-bold text-on-yellow">
+                    {index + 1}
+                  </span>
+                  <span>{step}</span>
+                </li>
+              ))
+            }
+          </ol>
+        </aside>
+      </div>
+    </section>
+
+    <section class="border-y border-hairline bg-surface-soft px-6 py-16 md:px-12 md:py-20">
+      <div class="mx-auto max-w-coreMaxWidth">
+        <div class="mb-10 max-w-3xl">
+          <p class="mb-3 text-[12px] font-semibold uppercase tracking-[0.125em] text-ch-yellow">
+            Why Start With a Trial
+          </p>
+          <h2 class="text-balance text-3xl font-bold leading-[1.1] tracking-[-0.02em] text-white md:text-5xl">
+            A good IPTV service should prove itself first.
+          </h2>
+          <p class="mt-5 text-base leading-[1.65] text-body md:text-lg">
+            Use the trial to confirm performance, device fit, and plan value before paying for a longer IPTV subscription.
+          </p>
+        </div>
+
+        <div class="grid gap-4 md:grid-cols-3">
+          {
+            benefits.map((benefit) => (
+              <article class="rounded-lg border border-hairline bg-surface-card p-6">
+                <h3 class="text-lg font-bold leading-tight text-white">
+                  {benefit.title}
+                </h3>
+                <p class="mt-4 text-sm leading-[1.6] text-body">
+                  {benefit.body}
+                </p>
+              </article>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <section class="px-6 py-16 md:px-12 md:py-20">
+      <div class="mx-auto max-w-3xl text-center">
+        <p class="mb-3 text-[12px] font-semibold uppercase tracking-[0.125em] text-ch-yellow">
+          Next Step
+        </p>
+        <h2 class="text-balance text-3xl font-bold leading-[1.1] tracking-[-0.02em] text-white md:text-5xl">
+          Ready to compare IPTV plans?
+        </h2>
+        <p class="mx-auto mt-5 max-w-2xl text-base leading-[1.65] text-body md:text-lg">
+          Choose the subscription length that fits your live football schedule, from a 1-month test to the 12-month value plan.
+        </p>
+        <div class="mt-8">
+          <CTAButton href="/#pricing" ariaLabel="View IPTV World Cup pricing plans">
+            View Plans
+          </CTAButton>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</BaseLayout>

@@ -1,0 +1,60 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import TopNav from '../components/TopNav.astro';
+import Footer from '../components/Footer.astro';
+import { SITE } from '../data/site';
+
+const links = [
+  { label: 'Home', href: '/' },
+  { label: 'Tournament journey', href: '/#teams' },
+  { label: 'Supported devices', href: '/#devices' },
+  { label: 'IPTV service guide', href: '/#iptv-service' },
+  { label: 'Pricing', href: '/#pricing' },
+  { label: 'FAQ', href: '/#faq' },
+  { label: 'Start trial', href: '/#start' },
+  { label: 'IPTV free trial', href: '/iptv-free-trial' },
+  { label: 'Terms of Use', href: '/terms-of-use' },
+  { label: 'Privacy Policy', href: '/privacy-policy' },
+  { label: 'Your Privacy Choices', href: '/privacy-choices' },
+  { label: 'Cookie Policy', href: '/cookies' },
+  { label: 'XML Sitemap', href: '/sitemap.xml' },
+];
+---
+
+<BaseLayout
+  title="Sitemap | IPTV World Cup"
+  description="Browse the IPTV World Cup sitemap, including homepage sections, pricing, FAQ, legal pages, privacy pages, and the XML sitemap."
+  canonical={`${SITE.domain}/sitemap`}
+  includeSchema={false}
+>
+  <TopNav />
+  <main id="main" class="bg-canvas px-6 py-16 md:px-12 md:py-24">
+    <section class="mx-auto max-w-3xl">
+      <p class="mb-4 text-[12px] font-semibold uppercase tracking-[0.125em] text-ch-yellow">
+        Sitemap
+      </p>
+      <h1 class="text-balance text-4xl font-bold leading-[1.05] tracking-[-0.02em] text-white md:text-6xl">
+        Site Map
+      </h1>
+      <p class="mt-6 text-base leading-[1.65] text-body md:text-lg">
+        Use this page to find the main IPTV World Cup pages, legal information, privacy information, and crawlable sitemap resources.
+      </p>
+
+      <ul class="mt-12 grid gap-3 sm:grid-cols-2">
+        {
+          links.map((link) => (
+            <li>
+              <a
+                href={link.href}
+                class="block rounded-lg border border-hairline bg-surface-card px-5 py-4 text-sm font-semibold text-body-strong transition-colors hover:border-ch-yellow/40 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-ch-yellow focus-visible:ring-offset-2 focus-visible:ring-offset-canvas"
+              >
+                {link.label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+  </main>
+  <Footer />
+</BaseLayout>

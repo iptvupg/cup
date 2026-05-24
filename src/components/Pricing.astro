@@ -1,0 +1,121 @@
+---
+import SectionWrapper from './SectionWrapper.astro';
+import { Check } from 'lucide-astro';
+import { PLANS, PLAN_FEATURES } from '../data/site';
+---
+
+<SectionWrapper
+  ariaLabel="IPTV World Cup pricing and subscription plans"
+  className="bg-canvas"
+>
+  <span id="pricing" class="block scroll-mt-24"></span>
+  <div class="mb-14 text-center">
+    <p class="mb-3 text-[12px] font-semibold uppercase tracking-[0.125em] text-ch-yellow">
+      Step 3 · Compare IPTV Plans
+    </p>
+    <h2 class="mx-auto max-w-3xl text-balance text-3xl font-bold leading-[1.1] tracking-[-0.0357em] text-white md:text-5xl">
+      Choose the plan that matches your World Cup.
+    </h2>
+    <p class="mx-auto mt-5 max-w-2xl text-base leading-[1.55] text-body md:text-lg">
+      Start with 1 month, cover the full tournament window, or lock in the 12-month value plan. Every option keeps the buying decision clear.
+    </p>
+  </div>
+
+  <div class="mx-auto grid max-w-7xl gap-4 sm:grid-cols-2 xl:grid-cols-4">
+    {
+      PLANS.map((plan) => (
+        <article
+          class:list={[
+            'relative flex flex-col rounded-lg p-5 md:p-6',
+            plan.featured
+              ? 'bg-ch-yellow text-on-yellow xl:-my-2 xl:shadow-2xl xl:shadow-ch-yellow/20'
+              : 'border border-hairline bg-surface-card',
+          ]}
+        >
+          {plan.badge && (
+            <span class="absolute -top-3 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-on-yellow px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.125em] text-ch-yellow">
+              {plan.badge}
+            </span>
+          )}
+          <header class="mb-6">
+            <h3
+              class:list={[
+                'text-[12px] font-semibold uppercase tracking-[0.125em]',
+                plan.featured ? 'text-on-yellow' : 'text-muted',
+              ]}
+            >
+              {plan.name}
+            </h3>
+            <p class="mt-3 flex items-baseline gap-2">
+              {plan.compareAt && (
+                <span
+                  class:list={[
+                    'text-lg font-semibold line-through',
+                    plan.featured ? 'text-on-yellow/65' : 'text-muted',
+                  ]}
+                >
+                  ${plan.compareAt}
+                </span>
+              )}
+              <span
+                class:list={[
+                  'text-[40px] font-bold leading-none tracking-[-0.0375em]',
+                  plan.featured ? 'text-on-yellow' : 'text-white',
+                ]}
+              >
+                ${plan.price}
+              </span>
+            </p>
+            {plan.save > 0 && (
+              <p
+                class:list={[
+                  'mt-3 inline-flex items-center rounded-sm px-2 py-0.5 text-[11px] font-semibold uppercase tracking-[0.125em]',
+                  plan.featured
+                    ? 'bg-on-yellow text-ch-yellow'
+                    : 'bg-ch-yellow/15 text-ch-yellow',
+                ]}
+              >
+                Save {plan.save}%
+              </p>
+            )}
+          </header>
+          <ul class="mb-7 flex-1 space-y-2.5">
+            {PLAN_FEATURES.map((f) => (
+              <li
+                class:list={[
+                  'flex items-start gap-3 text-sm',
+                  plan.featured ? 'text-on-yellow' : 'text-body',
+                ]}
+              >
+                <Check
+                  size={16}
+                  class:list={[
+                    'mt-1 shrink-0',
+                    plan.featured ? 'text-on-yellow' : 'text-ch-yellow',
+                  ]}
+                />
+                <span>{f}</span>
+              </li>
+            ))}
+          </ul>
+          <a
+            href="#start"
+            aria-label={`Get ${plan.name} plan now`}
+            class:list={[
+              'inline-flex h-11 w-full items-center justify-center rounded-md px-5 text-[14px] font-semibold transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-ch-yellow focus-visible:ring-offset-2',
+              plan.featured
+                ? 'bg-on-yellow text-ch-yellow hover:bg-canvas focus-visible:ring-offset-ch-yellow'
+                : 'bg-ch-yellow text-on-yellow hover:bg-primary-active focus-visible:ring-offset-surface-card',
+            ]}
+          >
+            Choose Plan
+          </a>
+        </article>
+      ))
+    }
+  </div>
+
+  <p class="mt-10 text-center text-xs text-muted">
+    Prices in USD. Start with a 24-hour trial, then continue with the plan you choose. Cancel anytime.
+  </p>
+</SectionWrapper>

@@ -1,0 +1,45 @@
+---
+import LegalPage from '../components/LegalPage.astro';
+
+const sections = [
+  {
+    title: 'Information you provide',
+    body: 'IPTV World Cup may collect information you choose to provide, such as contact details, account information, support requests, and subscription-related details submitted through forms or checkout flows.',
+  },
+  {
+    title: 'Information collected automatically',
+    body: 'The website may collect technical information such as device type, browser, IP address, referring page, pages viewed, and interactions with pricing, device, FAQ, or trial sections.',
+  },
+  {
+    title: 'How information is used',
+    items: [
+      'To provide and improve the website experience.',
+      'To help users compare IPTV subscription plans and supported devices.',
+      'To operate trials, account flows, payment flows, and support requests when available.',
+      'To measure traffic, performance, conversions, and content quality.',
+    ],
+  },
+  {
+    title: 'Analytics and advertising',
+    body: 'The website may use analytics or advertising tools to understand visitor behavior and improve marketing performance. These tools can use cookies or similar technologies.',
+  },
+  {
+    title: 'Your choices',
+    body: 'You may be able to limit cookies in your browser settings, request updates to account information, or manage privacy choices where required by applicable law.',
+  },
+  {
+    title: 'Legal review',
+    body: 'This privacy policy is a general template for the current website and should be reviewed by a qualified privacy professional before production use.',
+  },
+];
+---
+
+<LegalPage
+  title="Privacy Policy | IPTV World Cup"
+  description="Read the IPTV World Cup privacy policy for information collection, analytics, cookies, privacy choices, and data-use practices."
+  canonicalPath="/privacy-policy"
+  eyebrow="Privacy"
+  heading="Privacy Policy"
+  intro="This policy explains the types of information the IPTV World Cup website may collect and how that information may be used."
+  sections={sections}
+/>

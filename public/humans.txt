@@ -1,0 +1,12 @@
+/* TEAM */
+IPTV World Cup — Streaming the FIFA World Cup 2026™
+Site: https://iptvworldcup.org
+Location: United States
+
+/* THANKS */
+FIFA, FOX Sports, the IPTV World Cup engineering team.
+
+/* SITE */
+Last update: 2026-05-23
+Standards: HTML5, JSON-LD, Schema.org
+Stack: Astro, Tailwind CSS

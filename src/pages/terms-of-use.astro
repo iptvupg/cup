@@ -1,0 +1,40 @@
+---
+import LegalPage from '../components/LegalPage.astro';
+
+const sections = [
+  {
+    title: 'Use of the website',
+    body: 'You may use IPTV World Cup to review IPTV service information, compare subscription plans, check supported devices, and start a trial. Do not misuse the website, interfere with its operation, or attempt unauthorized access.',
+  },
+  {
+    title: 'Subscription information',
+    body: 'Plan prices, trial details, device support, and available content can change. Review the plan details shown at checkout before purchasing or continuing after a trial.',
+  },
+  {
+    title: 'Account responsibility',
+    body: 'If you create an account, you are responsible for keeping your login details secure and for activity that happens through your account.',
+  },
+  {
+    title: 'Content and trademarks',
+    body: 'FIFA World Cup, FIFA+, and other third-party names or marks belong to their respective owners. IPTV World Cup is not presented as FIFA+ or as an official FIFA website.',
+  },
+  {
+    title: 'No guaranteed availability',
+    body: 'Streaming quality and availability can depend on internet connection, device support, plan terms, content rights, regional restrictions, and service conditions.',
+  },
+  {
+    title: 'Contact',
+    body: 'For questions about these terms, use the contact method provided at checkout or in your account area. This page is a general website terms template and should be reviewed by a qualified legal professional before production use.',
+  },
+];
+---
+
+<LegalPage
+  title="Terms of Use | IPTV World Cup"
+  description="Read the IPTV World Cup terms of use for website access, subscription information, account responsibility, content availability, and legal-review notes."
+  canonicalPath="/terms-of-use"
+  eyebrow="Legal"
+  heading="Terms of Use"
+  intro="These terms explain the basic rules for using the IPTV World Cup website and reviewing IPTV subscription information."
+  sections={sections}
+/>

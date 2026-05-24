@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    background-color: #0a0a0a;
+    color: #fff;
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  body {
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    text-rendering: optimizeLegibility;
+    font-feature-settings: "kern" 1, "liga" 1;
+    overflow-x: clip;
+  }
+  h1,
+  h2,
+  h3,
+  p,
+  a,
+  li {
+    overflow-wrap: anywhere;
+  }
+  ::selection {
+    background: #faff69;
+    color: #0a0a0a;
+  }
+  a {
+    text-underline-offset: 3px;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  @supports not (text-wrap: balance) {
+    .text-balance {
+      text-wrap: normal;
+    }
+  }
+  .starfield {
+    background-image:
+      radial-gradient(1px 1px at 20% 30%, rgba(255, 255, 255, 0.6), transparent 50%),
+      radial-gradient(1px 1px at 75% 12%, rgba(255, 255, 255, 0.5), transparent 50%),
+      radial-gradient(1.5px 1.5px at 40% 70%, rgba(255, 255, 255, 0.4), transparent 50%),
+      radial-gradient(1px 1px at 88% 55%, rgba(255, 255, 255, 0.45), transparent 50%),
+      radial-gradient(1px 1px at 10% 80%, rgba(255, 255, 255, 0.35), transparent 50%),
+      radial-gradient(1px 1px at 60% 25%, rgba(255, 255, 255, 0.5), transparent 50%),
+      radial-gradient(1.2px 1.2px at 32% 15%, rgba(255, 255, 255, 0.4), transparent 50%),
+      radial-gradient(1px 1px at 92% 88%, rgba(255, 255, 255, 0.4), transparent 50%);
+    background-repeat: no-repeat;
+  }
+  .cosmic-bg {
+    background:
+      radial-gradient(ellipse 90% 70% at 75% 80%, rgba(250, 255, 105, 0.06) 0%, transparent 60%),
+      radial-gradient(ellipse 60% 50% at 30% 20%, #121212 0%, transparent 70%),
+      #0a0a0a;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 1ms !important;
+  }
+}
+
+@supports not (overflow: clip) {
+  body {
+    overflow-x: hidden;
+  }
+}

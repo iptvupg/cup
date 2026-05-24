@@ -1,0 +1,41 @@
+---
+import LegalPage from '../components/LegalPage.astro';
+
+const sections = [
+  {
+    title: 'What cookies are',
+    body: 'Cookies are small files stored by your browser. They can help websites remember preferences, understand traffic, support checkout flows, and improve performance.',
+  },
+  {
+    title: 'Types of cookies',
+    items: [
+      'Essential cookies help the site load and support basic functionality.',
+      'Analytics cookies help measure pages visited, engagement, and conversion paths.',
+      'Preference cookies may remember language, display, or consent settings.',
+      'Advertising cookies may help measure campaigns or personalize ads if advertising tools are used.',
+    ],
+  },
+  {
+    title: 'How to control cookies',
+    body: 'Most browsers let you block, delete, or limit cookies. Some features may not work correctly if essential cookies are disabled.',
+  },
+  {
+    title: 'Updates',
+    body: 'Cookie practices can change as website tools, analytics, checkout systems, and advertising platforms change.',
+  },
+  {
+    title: 'Legal review',
+    body: 'This cookie policy is a general template and should be reviewed by a qualified privacy professional before production use.',
+  },
+];
+---
+
+<LegalPage
+  title="Cookie Policy | IPTV World Cup"
+  description="Read the IPTV World Cup cookie policy covering essential cookies, analytics cookies, preference cookies, advertising cookies, and browser controls."
+  canonicalPath="/cookies"
+  eyebrow="Privacy"
+  heading="Cookie Policy"
+  intro="This page explains how cookies and similar technologies may be used on the IPTV World Cup website."
+  sections={sections}
+/>
