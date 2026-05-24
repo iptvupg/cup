@@ -20,10 +20,10 @@ const website = {
 const offerCatalog = {
   '@context': 'https://schema.org',
   '@type': 'Service',
-  name: `${SITE.name} IPTV service`,
-  serviceType: 'Live TV streaming subscription',
+  name: `${SITE.name} IPTV service for live football`,
+  serviceType: 'IPTV subscription',
   description:
-    'IPTV service plans for FIFA World Cup 2026, live football, and multi-device streaming.',
+    'IPTV service plans for live football, FIFA World Cup 2026 viewing, IPTV Smarters compatibility guidance, and multi-device streaming.',
   url: `${SITE.domain}#pricing`,
   provider: {
     '@type': 'Organization',
@@ -103,8 +103,21 @@ const webPage = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
   url: SITE.domain,
-  name: 'IPTV service plans for FIFA World Cup 2026',
+  name: 'IPTV service plans for live football and FIFA World Cup 2026',
   description: SITE.description,
+  about: [
+    { '@type': 'Thing', name: 'IPTV' },
+    { '@type': 'Thing', name: 'IPTV service' },
+    { '@type': 'Thing', name: 'IPTV subscription' },
+    { '@type': 'Thing', name: 'IPTV Smarters' },
+    { '@type': 'SportsEvent', name: 'FIFA World Cup 2026' },
+  ],
+  primaryImageOfPage: {
+    '@type': 'ImageObject',
+    url: SITE.ogImage,
+    width: 1200,
+    height: 630,
+  },
   dateModified: SITE.lastUpdated,
   inLanguage: 'en-US',
   speakable: {

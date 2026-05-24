@@ -1,4 +1,4 @@
-# IPTV World Cup — robots.txt
+# IPTV World Cup - robots.txt
 # https://iptvworldcup.org
 
 User-agent: *

@@ -1,17 +1,21 @@
 export const SITE = {
   name: 'IPTV World Cup',
   domain: 'https://iptvworldcup.org',
-  brand: 'IPTV World Cup — FIFA World Cup 2026 IPTV Subscription',
-  tagline: 'Stream live football and FIFA World Cup 2026 coverage.',
+  brand: 'IPTV World Cup - FIFA World Cup 2026 IPTV Subscription',
+  tagline: 'IPTV plans for live football and FIFA World Cup 2026 viewing.',
   description:
-    'Compare IPTV service plans for FIFA World Cup 2026 and live football. Choose an IPTV subscription from $16 with smart TV, mobile, console, and browser support.',
-  primaryKeyword: 'iptv service',
+    'Learn what IPTV is, compare IPTV service plans for live football, and start a 24-hour trial before choosing a World Cup 2026 IPTV subscription from $16.',
+  primaryKeyword: 'iptv',
   secondaryKeywords: [
+    'what is iptv',
+    'iptv smarters',
     'best iptv',
     'iptv services',
     'iptv providers',
     'iptv provider',
+    'iptv stream',
     'iptv subscription',
+    'iptv service',
     'best iptv service',
     'best iptv services',
     'watch FIFA World Cup 2026 live',
@@ -26,7 +30,7 @@ export const SITE = {
   ],
   startDate: '2026-06-11',
   endDate: '2026-07-19',
-  lastUpdated: '2026-05-24',
+  lastUpdated: '2026-05-25',
   totalMatches: 104,
   trialHours: 24,
   starterPrice: 16,
@@ -36,40 +40,56 @@ export const SITE = {
 
 export const FAQS = [
   {
+    q: 'What is IPTV?',
+    a: 'IPTV means Internet Protocol Television. Instead of receiving TV through cable or satellite, an IPTV stream plays over an internet connection on a smart TV, streaming device, phone, tablet, browser, or compatible IPTV player.',
+  },
+  {
+    q: 'How does an IPTV service work?',
+    a: 'An IPTV service gives you access details for live TV streams, sports, and on-demand content. You open the service on a supported app or device, sign in with the details from your provider, and watch through your internet connection.',
+  },
+  {
+    q: 'Does IPTV World Cup work with IPTV Smarters?',
+    a: 'Many customers search for IPTV Smarters because it is a popular player. Before buying a subscription, confirm which apps and login formats are supported, including smart TV apps, Fire TV, Android, iOS, and web browser access.',
+  },
+  {
     q: 'What is the best IPTV subscription for FIFA World Cup 2026?',
-    a: 'IPTV World Cup is built for customers comparing FIFA World Cup 2026 IPTV subscription plans. Plans start at $16, include a 24-hour free trial, and support smart TVs, phones, tablets, streaming devices, consoles, and web browsers.',
+    a: 'The best IPTV subscription for World Cup 2026 is the one you can test before match day. Plans here start with a 24-hour trial, show clear pricing from $16, and support smart TVs, phones, tablets, streaming devices, consoles, and browsers.',
   },
   {
     q: 'What should I look for in the best IPTV service?',
-    a: 'A strong IPTV service for live football should show clear pricing, device support, trial terms, cancellation rules, and current sports coverage before checkout. Avoid providers that hide plan details or make unsupported content promises.',
+    a: 'A good IPTV service should show pricing, trial terms, supported devices, app compatibility, renewal rules, and current sports coverage before checkout. Avoid IPTV providers that hide plan details, skip setup instructions, or make content promises they do not explain.',
+  },
+  {
+    q: 'How do I compare IPTV providers?',
+    a: 'Compare IPTV providers by trial access, stream stability, device support, setup instructions, customer support, refund terms, and plan length. Price matters, but a cheap IPTV subscription is not useful if it fails on the device you watch most.',
   },
   {
     q: 'Is IPTV World Cup an IPTV provider?',
-    a: 'IPTV World Cup is an IPTV provider website focused on FIFA World Cup 2026 and live football subscription plans. Customers can compare plan lengths, check supported devices, and start with a 24-hour trial.',
+    a: 'IPTV World Cup is a provider website focused on live football and FIFA World Cup 2026 subscription plans. Customers can compare plan lengths, check device support, and start with a 24-hour trial before choosing a paid plan.',
   },
   {
     q: 'Is IPTV World Cup the same as FIFA+?',
-    a: 'No. FIFA+ is FIFA’s official free football streaming and archive platform. IPTV World Cup is a separate IPTV subscription website for customers comparing paid live football plans and FIFA World Cup 2026 viewing options.',
+    a: "No. FIFA+ is FIFA's official free football streaming and archive platform. IPTV World Cup is a separate IPTV subscription website for customers comparing paid live football plans and FIFA World Cup 2026 viewing options.",
   },
   {
     q: 'How much does IPTV World Cup cost after the free trial?',
-    a: 'After the 24-hour free trial, IPTV World Cup plans start at $16 for 1 month. Customers can also choose 3 months for $39, 6 months for $60, or 12 months for $90, reduced from $192.',
+    a: 'After the 24-hour free trial, plans start at $16 for 1 month. Customers can also choose 3 months for $39, 6 months for $60, or 12 months for $90, reduced from $192.',
   },
   {
     q: 'Can I stream live football with IPTV World Cup?',
-    a: 'Yes. IPTV World Cup is positioned for customers who want to stream live football through an IPTV subscription. Review the active plan before purchase to confirm current channels, event availability, and supported devices.',
+    a: 'Yes. The service is built for customers who want an IPTV stream for live football. Review the active plan before purchase to confirm current channels, match availability, app support, and supported devices.',
   },
   {
     q: 'Can I watch the World Cup 2026 in 4K on IPTV World Cup?',
-    a: 'Yes. IPTV World Cup delivers select FIFA World Cup 2026 matches in 4K UHD with HDR on supported smart TVs and streaming devices, plus live 1080p HD on all other devices.',
+    a: 'Yes. Select FIFA World Cup 2026 matches are available in 4K UHD with HDR on supported smart TVs and streaming devices, plus live 1080p HD on other devices.',
   },
   {
     q: 'What devices support IPTV World Cup streaming?',
-    a: 'IPTV World Cup supports iPhone, iPad, Android, Apple TV, Roku, Amazon Fire TV, Chromecast, Samsung smart TVs, LG smart TVs, Vizio SmartCast, Xbox Series X|S, PlayStation 5, and modern web browsers.',
+    a: 'Supported devices include iPhone, iPad, Android, Apple TV, Roku, Amazon Fire TV, Chromecast, Samsung smart TVs, LG smart TVs, Vizio SmartCast, Xbox Series X|S, PlayStation 5, and modern web browsers.',
   },
   {
     q: 'Can I cancel my IPTV World Cup subscription anytime?',
-    a: 'Yes. You can cancel your IPTV World Cup subscription at any time from your account settings. If you cancel during the 24-hour free trial you will not be charged.',
+    a: 'Yes. You can cancel your subscription at any time from your account settings. If you cancel during the 24-hour free trial you will not be charged.',
   },
   {
     q: 'When does the FIFA World Cup 2026 start and end?',
@@ -77,33 +97,33 @@ export const FAQS = [
   },
   {
     q: 'Where is the FIFA World Cup 2026 being held?',
-    a: 'FIFA World Cup 2026 is co-hosted by the United States, Canada, and Mexico across 16 host cities — including New York/New Jersey, Los Angeles, Dallas, Miami, Atlanta, Toronto, Vancouver, and Mexico City. It is the first World Cup with 48 teams and 104 matches.',
+    a: 'FIFA World Cup 2026 is co-hosted by the United States, Canada, and Mexico across 16 host cities, including New York/New Jersey, Los Angeles, Dallas, Miami, Atlanta, Toronto, Vancouver, and Mexico City. It is the first World Cup with 48 teams and 104 matches.',
   },
   {
     q: 'Why choose IPTV World Cup instead of searching for free streams?',
-    a: 'IPTV World Cup gives customers a cleaner buying path: clear plan pricing, a 24-hour trial, device support, and a focused FIFA World Cup IPTV subscription experience instead of unreliable search results and unclear streaming pages.',
+    a: 'Free stream searches often lead to unstable pages, pop-ups, and unclear video quality. This site gives you a cleaner buying path: visible pricing, a 24-hour trial, device support, and a FIFA World Cup subscription experience built around live football.',
   },
 ];
 
 export const VALUE_PROPS = [
   {
-    title: 'All 104 matches, every minute live',
-    body: 'Follow the full 104-match FIFA World Cup 2026 journey from the group stage to the July 19 final with a subscription built for live football fans.',
+    title: 'A focused IPTV service for football',
+    body: 'Use one subscription path for live football, World Cup 2026 viewing, and the devices your household already uses.',
     icon: 'Trophy',
   },
   {
-    title: '24 hours free, cancel anytime',
-    body: 'Start with a 24-hour free trial, compare the picture quality and device experience, then continue from $16 for 1 month.',
+    title: 'Test the IPTV stream first',
+    body: 'Start with a 24-hour free trial, check picture quality and setup on your device, then continue from $16 for 1 month.',
     icon: 'BadgePercent',
   },
   {
     title: 'Watch on every screen you own',
-    body: 'Watch live football on smart TVs, streaming devices, game consoles, phones, tablets, and modern web browsers.',
+    body: 'Watch on smart TVs, streaming devices, game consoles, phones, tablets, compatible players, and modern browsers.',
     icon: 'MonitorSmartphone',
   },
   {
-    title: 'Built for football-first viewers',
-    body: 'Choose a simple IPTV subscription path focused on match day access, device flexibility, and clear plan pricing.',
+    title: 'Clear before checkout',
+    body: 'Compare plan length, price, trial terms, and device support without digging through a vague provider page.',
     icon: 'Tv',
   },
 ];
@@ -112,17 +132,17 @@ export const HOW_IT_WORKS = [
   {
     step: 1,
     title: 'Start your 24-hour free trial',
-    body: 'Sign up at iptvworldcup.org in under a minute. No credit-card surprises — cancel anytime within 24 hours and pay nothing.',
+    body: 'Start at iptvworldcup.org, test the stream for 24 hours, and make sure your main device works before the paid plan continues.',
   },
   {
     step: 2,
-    title: 'Download the IPTV World Cup app',
-    body: 'Get IPTV World Cup on iOS, Android, Apple TV, Roku, Fire TV, Chromecast, Xbox, PlayStation, or any smart TV.',
+    title: 'Set up your app or device',
+    body: 'Use a supported smart TV, mobile app, streaming device, console, browser, or compatible player such as IPTV Smarters if your plan supports it.',
   },
   {
     step: 3,
     title: 'Stream live football',
-    body: 'Tune in from kickoff through the final on July 19, 2026, using the device setup that works best for you.',
+    body: 'Watch live football through your internet connection, from early tournament matches through the final on July 19, 2026.',
   },
 ];
 
@@ -145,6 +165,7 @@ export const PLAN_FEATURES = [
   '24-hour free trial',
   'Live football streaming',
   'FIFA World Cup 2026 focus',
+  'IPTV Smarters compatibility guidance',
   '4K · FHD · HD quality',
   'TV guide support',
   'Works on major devices',
@@ -187,5 +208,5 @@ export const MATCH_PHASES = [
   { phase: 'Quarterfinals', dates: 'Jul 9 – Jul 11', matches: 4 },
   { phase: 'Semifinals', dates: 'Jul 14 – Jul 15', matches: 2 },
   { phase: '3rd-Place Match', dates: 'Jul 18', matches: 1 },
-  { phase: 'Final — MetLife Stadium', dates: 'Jul 19', matches: 1 },
+  { phase: 'Final at MetLife Stadium', dates: 'Jul 19', matches: 1 },
 ];
