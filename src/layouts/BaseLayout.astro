@@ -1,8 +1,7 @@
 ---
-import '@fontsource/inter/400.css';
-import '@fontsource/inter/600.css';
-import '@fontsource/inter/700.css';
-import '@fontsource/inter/900.css';
+import '@fontsource/inter/latin-400.css';
+import '@fontsource/inter/latin-600.css';
+import '@fontsource/inter/latin-700.css';
 import '../styles/global.css';
 import SchemaJsonLd from '../components/SchemaJsonLd.astro';
 import { SITE } from '../data/site';
@@ -72,8 +71,6 @@ const {
     <meta name="geo.placename" content="United States" />
 
     <!-- Resource hints -->
-    <link rel="preconnect" href="https://images.api.fox.com" crossorigin />
-    <link rel="dns-prefetch" href="https://images.api.fox.com" />
     <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
     <link rel="alternate" type="text/markdown" href="/llms.txt" title="LLM summary" />
     <link rel="alternate" type="text/markdown" href="/llms-full.txt" title="Full LLM knowledge base" />

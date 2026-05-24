@@ -31,8 +31,7 @@ export const SITE = {
   trialHours: 24,
   starterPrice: 16,
   annualPrice: 90,
-  ogImage:
-    'https://images.api.fox.com/dtc/pmt/assets/Hero_2880x1280__17__1773363662531.jpg?width=1200&height=630&fit=bounds&format=jpg',
+  ogImage: 'https://iptvworldcup.org/images/og-fifa-world-cup-2026.jpg',
 };
 
 export const FAQS = [
