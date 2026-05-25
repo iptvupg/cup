@@ -1,6 +1,6 @@
 export const SITE = {
   name: 'IPTV World Cup',
-  domain: 'https://iptvworldcup.org',
+  domain: 'https://www.iptvworldcup.org',
   brand: 'IPTV World Cup - FIFA World Cup 2026 IPTV Subscription',
   tagline: 'IPTV plans for live football and FIFA World Cup 2026 viewing.',
   description:
@@ -35,7 +35,7 @@ export const SITE = {
   trialHours: 24,
   starterPrice: 16,
   annualPrice: 90,
-  ogImage: 'https://iptvworldcup.org/images/iptv-service-fifa-world-cup-2026-og.jpg',
+  ogImage: 'https://www.iptvworldcup.org/images/iptv-service-fifa-world-cup-2026-og.jpg',
 };
 
 export const FAQS = [
@@ -132,7 +132,7 @@ export const HOW_IT_WORKS = [
   {
     step: 1,
     title: 'Start your 24-hour free trial',
-    body: 'Start at iptvworldcup.org, test the stream for 24 hours, and make sure your main device works before the paid plan continues.',
+    body: 'Start at www.iptvworldcup.org, test the stream for 24 hours, and make sure your main device works before the paid plan continues.',
   },
   {
     step: 2,

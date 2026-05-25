@@ -1,6 +1,6 @@
 /* TEAM */
 IPTV World Cup — Streaming the FIFA World Cup 2026™
-Site: https://iptvworldcup.org
+Site: https://www.iptvworldcup.org
 Location: United States
 
 /* THANKS */

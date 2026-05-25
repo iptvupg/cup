@@ -1,5 +1,5 @@
 # IPTV World Cup - robots.txt
-# https://iptvworldcup.org
+# https://www.iptvworldcup.org
 
 User-agent: *
 Allow: /
@@ -64,8 +64,8 @@ User-agent: Meta-ExternalAgent
 Allow: /
 
 # Sitemaps
-Sitemap: https://iptvworldcup.org/sitemap.xml
+Sitemap: https://www.iptvworldcup.org/sitemap.xml
 
 # AI knowledge files
-# LLM context: https://iptvworldcup.org/llms.txt
-# LLM context (full): https://iptvworldcup.org/llms-full.txt
+# LLM context: https://www.iptvworldcup.org/llms.txt
+# LLM context (full): https://www.iptvworldcup.org/llms-full.txt

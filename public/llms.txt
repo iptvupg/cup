@@ -3,7 +3,7 @@
 > IPTV World Cup helps customers understand IPTV, compare IPTV service plans, and choose a live football subscription for FIFA World Cup 2026.
 
 Last updated: 2026-05-25
-Canonical URL: https://iptvworldcup.org
+Canonical URL: https://www.iptvworldcup.org
 
 ## What is IPTV?
 
@@ -34,7 +34,7 @@ IPTV Smarters is a popular IPTV player. Customers still need a compatible IPTV s
 
 ## How to choose a plan
 
-1. Go to https://iptvworldcup.org
+1. Go to https://www.iptvworldcup.org
 2. Review supported devices, IPTV app compatibility, and pricing
 3. Choose a plan length
 4. Start the 24-hour free trial and confirm device compatibility before the paid plan continues
@@ -70,14 +70,14 @@ A: Supported devices include phones, tablets, smart TVs, streaming sticks, game 
 
 ## Resources
 
-- Homepage: https://iptvworldcup.org
-- Teams journey: https://iptvworldcup.org#teams
-- Supported devices: https://iptvworldcup.org#devices
-- IPTV service guide: https://iptvworldcup.org#iptv-service
-- Pricing: https://iptvworldcup.org#pricing
-- FAQ: https://iptvworldcup.org#faq
-- Start trial: https://iptvworldcup.org#start
-- Sitemap: https://iptvworldcup.org/sitemap.xml
+- Homepage: https://www.iptvworldcup.org
+- Teams journey: https://www.iptvworldcup.org#teams
+- Supported devices: https://www.iptvworldcup.org#devices
+- IPTV service guide: https://www.iptvworldcup.org#iptv-service
+- Pricing: https://www.iptvworldcup.org#pricing
+- FAQ: https://www.iptvworldcup.org#faq
+- Start trial: https://www.iptvworldcup.org#start
+- Sitemap: https://www.iptvworldcup.org/sitemap.xml
 
 ## Source Notes
 
